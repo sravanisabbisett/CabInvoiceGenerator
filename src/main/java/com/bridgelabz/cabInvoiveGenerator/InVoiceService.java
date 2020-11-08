@@ -15,11 +15,11 @@ public class InVoiceService {
         this.rideRepository = rideRepository;
     }
 
-    public InVoiceSummary getInvoice(int userID) {
+    public InVoiceSummary getInvoice(int userID,boolean premiumRide) {
         InVoiceSummary invoiceSummary = null;
         for (RideRepository userRides : rideRepository) {
             if (userRides.userID == userID) {
-                invoiceSummary = new InVoiceGenerator().calculateTotal(userRides.rides);
+                invoiceSummary = new InVoiceGenerator().calculateTotal(userRides.rides,premiumRide);
             }
         }
         return invoiceSummary;
