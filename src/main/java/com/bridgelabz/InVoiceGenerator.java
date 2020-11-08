@@ -10,12 +10,13 @@ public class InVoiceGenerator {
         double totalFare=distance*NORMAL_COST_PER_KILOMETER+time*NORMAL_COST_PER_MINUTE;
         return Math.max(totalFare, MINIMUM_FARE);
     }
-    public double calculateTotal(Ride[] rides) {
+
+    public InVoiceSummary calculateTotal(Ride[] rides){
         double totalFare=0;
         for(Ride ride:rides){
             totalFare+=this.calculateFare(ride.distance,ride.time);
         }
-        return totalFare;
+        return new InVoiceSummary(rides.length, totalFare);
     }
 }
 
