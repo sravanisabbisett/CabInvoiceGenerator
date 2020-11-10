@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.cabInvoiceGenerator.CabInvoiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-11-10T02:37:16" hostname="DESKTOP-62HQPBS" time="0.009">
+<testsuite name="com.bridgelabz.cabInvoiceGenerator.CabInvoiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-11-10T04:27:59" hostname="DESKTOP-62HQPBS" time="0.004">
   <properties/>
-  <testcase name="givenLessDistanceAndTime_ShouldReturnMinimumFare" classname="com.bridgelabz.cabInvoiceGenerator.CabInvoiceTest" time="0.002"/>
-  <testcase name="givenDistanceAndTime_ShouldReturnFare" classname="com.bridgelabz.cabInvoiceGenerator.CabInvoiceTest" time="0.0"/>
-  <testcase name="givenUserId_shouldReturnInvoiceSummary" classname="com.bridgelabz.cabInvoiceGenerator.CabInvoiceTest" time="0.004"/>
+  <testcase name="givenUserId_shouldReturnInvoiceSummary" classname="com.bridgelabz.cabInvoiceGenerator.CabInvoiceTest" time="0.002"/>
   <testcase name="givenMultipleRides_ShouldReturnInvoiceSummary" classname="com.bridgelabz.cabInvoiceGenerator.CabInvoiceTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
