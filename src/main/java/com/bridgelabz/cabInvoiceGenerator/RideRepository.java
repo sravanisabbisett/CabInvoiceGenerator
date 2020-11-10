@@ -18,6 +18,9 @@ public class RideRepository {
     public List<Ride> getRides(String userId) {
         return this.userRides.get(userId);
     }
+    public Map<String, List<Ride>> getRideRepositoryMap(){
+        return this.userRides;
+    }
 
 }
 

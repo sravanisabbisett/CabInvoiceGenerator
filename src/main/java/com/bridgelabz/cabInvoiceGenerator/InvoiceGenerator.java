@@ -12,13 +12,6 @@ public class InvoiceGenerator {
         this.rideRepository=new RideRepository();
     }
 
-    /*public InvoiceSummary calculateTotal(List<Ride> rides){
-        double totalFare=0;
-        for(Ride ride:rides) {
-            totalFare += this.calculateFare(ride.distance, ride.time);
-        }
-        return new InvoiceSummary(rides.size(), totalFare);
-    }*/
     public InvoiceSummary calculateTotal(List<Ride> rides) {
         double totalFare = 0;
         for (Ride ride : rides) {
@@ -32,7 +25,9 @@ public class InvoiceGenerator {
         rideRepository.addRide(userId, Arrays.asList(rides));
     }
 
-    public InvoiceSummary getInvoiceSummary(String userId) {
+    public InvoiceSummary getInvoiceSummary(String userId) throws InvoiceException {
+        if(!rideRepository.getRideRepositoryMap().containsKey(userId))
+            throw new InvoiceException("INVALID_USERID", InvoiceException.ExceptionType.INVALID_USERID);
         return this.calculateTotal(rideRepository.getRides(userId));
     }
 }
